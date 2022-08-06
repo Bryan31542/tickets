@@ -9,25 +9,29 @@ if (!searchParams.has("escritorio")) {
   throw new Error("El escritorio es obligatorio");
 }
 
-const escritorio = searchParams.get("escritorio");
-lblDesk.innerText = escritorio;
+const desk = searchParams.get("escritorio");
+lblDesk.innerText = desk;
 
 const socket = io();
 
 socket.on("connect", () => {
-  btnCreate.disabled = false;
+  btnAttend.disabled = false;
 });
 
 socket.on("disconnect", () => {
-  btnCreate.disabled = true;
+  btnAttend.disabled = true;
 });
 
 socket.on("last-ticket", (last) => {
-//   lblNewTicket.innerText = "Ticket " + last;
+  //   lblNewTicket.innerText = "Ticket " + last;
 });
 
 btnAttend.addEventListener("click", () => {
-//   socket.emit("next-ticket", null, (ticket) => {
-//     lblNewTicket.innerText = ticket;
-//   });
+  socket.emit("attend-ticket", { desk }, (payload) => {
+    console.log(payload);
+  });
+
+  //   socket.emit("next-ticket", null, (ticket) => {
+  //     lblNewTicket.innerText = ticket;
+  //   });
 });
