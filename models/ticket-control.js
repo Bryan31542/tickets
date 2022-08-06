@@ -3,8 +3,8 @@ const fs = require("fs");
 
 class Ticket {
   constructor(number, desk) {
-    this.number = "";
-    this.desk = "";
+    this.number = number;
+    this.desk = desk;
   }
 }
 
@@ -52,7 +52,7 @@ class TicketControl {
 
     this.saveDB();
 
-    return `Ticket ${this.number}`;
+    return "Ticket " + ticket.number;
   }
 
   attendTicket(desk) {
