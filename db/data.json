@@ -1,23 +1,6 @@
 {
-    "last": 107,
+    "last": 0,
     "today": 6,
     "tickets": [],
-    "lastFour": [
-        {
-            "number": 107,
-            "desk": "Escritorio 1"
-        },
-        {
-            "number": 106,
-            "desk": "Escritorio 1"
-        },
-        {
-            "number": 105,
-            "desk": "Escritorio 1"
-        },
-        {
-            "number": 104,
-            "desk": "Escritorio 1"
-        }
-    ]
+    "lastFour": []
 }
