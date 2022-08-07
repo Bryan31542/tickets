@@ -64,10 +64,8 @@ class TicketControl {
     const ticket = this.tickets.shift();
     ticket.desk = desk;
 
-    // adding at the begining of the array
     this.lastFour.unshift(ticket);
 
-    // if the array is greater than 4, remove the last element
     if (this.lastFour.length > 4) {
       this.lastFour.splice(-1, 1);
     }

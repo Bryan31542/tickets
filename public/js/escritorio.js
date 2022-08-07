@@ -1,6 +1,8 @@
 // HTMLs Refs
 const lblDesk = document.querySelector("h1");
 const btnAttend = document.querySelector("button");
+const lblTicket = document.querySelector("small");
+const divAlert = document.querySelector(".alert");
 
 const searchParams = new URLSearchParams(window.location.search);
 
@@ -11,6 +13,8 @@ if (!searchParams.has("escritorio")) {
 
 const desk = searchParams.get("escritorio");
 lblDesk.innerText = desk;
+
+divAlert.style.display = "none";
 
 const socket = io();
 
@@ -27,11 +31,12 @@ socket.on("last-ticket", (last) => {
 });
 
 btnAttend.addEventListener("click", () => {
-  socket.emit("attend-ticket", { desk }, (payload) => {
-    console.log(payload);
-  });
+  socket.emit("attend-ticket", { desk }, ({ ok, ticket, msg }) => {
+    if (!ok) {
+      lblTicket.innerText = "Nadie";
+      return (divAlert.style.display = "");
+    }
 
-  //   socket.emit("next-ticket", null, (ticket) => {
-  //     lblNewTicket.innerText = ticket;
-  //   });
+    lblTicket.innerText = "Ticket " + ticket.number;
+  });
 });

@@ -1,1 +1,23 @@
-{"last":93,"today":6,"tickets":[{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":"","desk":""},{"number":83,"desk":null},{"number":84,"desk":null},{"number":85,"desk":null},{"number":86,"desk":null},{"number":87,"desk":null},{"number":88,"desk":null},{"number":89,"desk":null},{"number":90,"desk":null},{"number":91,"desk":null},{"number":92,"desk":null},{"number":93,"desk":null}],"lastFour":[]}
+{
+    "last": 107,
+    "today": 6,
+    "tickets": [],
+    "lastFour": [
+        {
+            "number": 107,
+            "desk": "Escritorio 1"
+        },
+        {
+            "number": 106,
+            "desk": "Escritorio 1"
+        },
+        {
+            "number": 105,
+            "desk": "Escritorio 1"
+        },
+        {
+            "number": 104,
+            "desk": "Escritorio 1"
+        }
+    ]
+}
