@@ -3,14 +3,15 @@ const TicketControl = require("../models/ticket-control");
 const ticketControl = new TicketControl();
 
 const socketController = (socket) => {
+  // When the client connects
   socket.emit("last-ticket", ticketControl.last);
   socket.emit("actual-status", ticketControl.lastFour);
+  socket.emit("pending-tickets", ticketControl.tickets.length);
 
   socket.on("next-ticket", (payload, callback) => {
     const nextTicket = ticketControl.nextTicket();
     callback(nextTicket);
-
-    //TODO: Notify new ticket
+    socket.broadcast.emit("pending-tickets", ticketControl.tickets.length);
   });
 
   socket.on("attend-ticket", ({ desk }, callback) => {
@@ -25,6 +26,8 @@ const socketController = (socket) => {
 
     // Updating the last four
     socket.broadcast.emit("actual-status", ticketControl.lastFour);
+    socket.emit("pending-tickets", ticketControl.tickets.length);
+    socket.broadcast.emit("pending-tickets", ticketControl.tickets.length);
 
     if (!attendTicket) {
       return callback({
